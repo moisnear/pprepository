@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecollapse - Участники</title>
+    <style>
+        :root {
+            --main-bg: #0A2E36;
+            --accent: #27FB6B;
+            --text: #E8F1F2;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: var(--main-bg);
+            color: var(--text);
+            margin: 0;
+            padding-top: 70px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,46,54,0.9);
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .member-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: transform 0.3s;
+            border: 1px solid rgba(39,251,107,0.3);
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px rgba(39,251,107,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 1rem auto;
+            display: block;
+            border: 3px solid var(--accent);
+        }
+
+        .role-tag {
+            color: var(--accent);
+            font-size: 0.9em;
+            margin: 0.5rem 0;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О проекте</a></li>
+            <li><a href="team.html" class="active">Участники</a></li>
+            <li><a href="journal.html">Журнал</a></li>
+            <li><a href="resources.html">Ресурсы</a></li>
+        </ul>
+    </nav>
+
+    <h2>Наша команда</h2>
+    <div class="team-grid">
+        <!-- Слава Павлов -->
+        <div class="member-card">
+            <img src="slava-pavlov.jpg" alt="Слава Павлов" class="member-photo">
+            <h3>Слава Павлов</h3>
+            <div class="role-tag">Тимлид • Лидер • Программист</div>
+            <ul style="list-style: circle; padding-left: 1.2rem;">
+                <li>Разработка концепции и идеи проекта</li>
+                <li>Создание библии мира игры</li>
+                <li>Архитектура игрового движка</li>
+                <li>Координация команды разработки</li>
+            </ul>
+        </div>
+
+        <!-- Щеглов Семён -->
+        <div class="member-card">
+            <img src="semen-shcheglov.jpg" alt="Щеглов Семён" class="member-photo">
+            <h3>Щеглов Семён</h3>
+            <div class="role-tag">Спикер • Контент-мейкер • Программист</div>
+            <ul style="list-style: circle; padding-left: 1.2rem;">
+                <li>Публичные выступления и защита проекта</li>
+                <li>Озвучка промо-роликов</li>
+                <li>Создание 3D-моделей и текстур</li>
+                
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

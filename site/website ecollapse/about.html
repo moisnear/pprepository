@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecollapse - О проекте</title>
+    <style>
+        :root {
+            --main-bg: #0A2E36;
+            --accent: #27FB6B;
+            --text: #E8F1F2;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: var(--main-bg);
+            color: var(--text);
+            margin: 0;
+            padding-top: 70px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,46,54,0.9);
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        .content-section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html" class="active">О проекте</a></li>
+            <li><a href="team.html">Участники</a></li>
+            <li><a href="journal.html">Журнал</a></li>
+            <li><a href="resources.html">Ресурсы</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-section">
+        <h2>Концепция проекта</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+            <div>
+                <img src="game-scheme.svg" alt="Схема игрового процесса" style="width: 100%;">
+            </div>
+            <div>
+                <p style="line-height: 1.6;">Игра с процедурно генерируемыми биомами, динамической экосистемой и механиками выживания, которая будет обеспечивать игроку уникальный опыт и высокую реиграбельность.Мы предлагаем игроку:</p>
+                <ul style="list-style: square inside; margin-top: 1rem;">
+                    <li>Процедурно генерируемые уникальные миры.</li>
+                    <li>Систему эволюции и адаптации игрока.</li>
+                    <li>Динамическую и изменяющуюся экосистему.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

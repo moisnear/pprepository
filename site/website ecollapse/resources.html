@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecollapse - Ресурсы</title>
+    <style>
+        :root {
+            --main-bg: #0A2E36;
+            --accent: #27FB6B;
+            --text: #E8F1F2;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: var(--main-bg);
+            color: var(--text);
+            margin: 0;
+            padding-top: 70px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,46,54,0.9);
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        .resources-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .resource-card {
+            display: inline-block;
+            padding: 1rem;
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text);
+            margin: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О проекте</a></li>
+            <li><a href="team.html">Участники</a></li>
+            <li><a href="journal.html">Журнал</a></li>
+            <li><a href="resources.html" class="active">Ресурсы</a></li>
+        </ul>
+    </nav>
+
+    <div class="resources-container">
+        <h2>Полезные материалы</h2>
+        <div style="text-align: center;">
+            <a href="#" class="resource-card">
+                <img src="eco-icon.svg" alt="Telegram" style="width: 80px;">
+                <p>Телеграм канал нашей команды</p>
+            </a>
+            <!-- Добавить другие ресурсы -->
+        </div>
+    </div>
+</body>
+</html>

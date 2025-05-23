@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecollapse - Журнал</title>
+    <style>
+        :root {
+            --main-bg: #0A2E36;
+            --accent: #27FB6B;
+            --text: #E8F1F2;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: var(--main-bg);
+            color: var(--text);
+            margin: 0;
+            padding-top: 80px;
+        }
+
+        /* Единая навигация для всех страниц */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,46,54,0.95);
+            padding: 1rem;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(39,251,107,0.2);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            background: rgba(39,251,107,0.15);
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        nav a.active {
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+        }
+
+        /* Стили специфичные для журнала */
+        .timeline {
+            border-left: 3px solid var(--accent);
+            margin: 2rem auto;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .post {
+            position: relative;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: linear-gradient(90deg, transparent, rgba(39,251,107,0.1));
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .post:hover {
+            transform: translateX(10px);
+        }
+
+        .post::before {
+            content: "";
+            position: absolute;
+            left: -2.35rem;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--accent);
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .event-photo {
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid rgba(39,251,107,0.3);
+            transition: transform 0.3s;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+        .event-photo:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--accent);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .event-date {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+            color: #7f9c9c;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О проекте</a></li>
+            <li><a href="team.html">Участники</a></li>
+            <li><a href="journal.html" class="active">Журнал</a></li>
+            <li><a href="resources.html">Ресурсы</a></li>
+        </ul>
+    </nav>
+
+    <h2>Журнал разработки</h2>
+    
+    <div class="timeline">
+        <!-- Событие 15 мая -->
+        <div class="post">
+            <div class="event-date">15 мая 2025</div>
+            <h3>Успешная промежуточная защита</h3>
+            <p>Команда достигла важного рубежа в разработке проекта:</p>
+            <ul>
+                <li>Получена максимальная оценка жюри</li>
+                <li>Получены ценные рекомендации</li>
+            </ul>
+           
+        </div>
+
+        <!-- Событие 25 апреля -->
+        <div class="post">
+            <div class="event-date">25 апреля 2025</div>
+            <h3>Новые концепт-арты окружения</h3>
+            <p>Представляем новые концепт-арты:</p>
+            <div class="photo-grid">
+                <img src="concept1.jpg" class="event-photo">
+                <img src="concept2.jpg" class="event-photo">
+                <img src="concept3.jpg" class="event-photo">
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
